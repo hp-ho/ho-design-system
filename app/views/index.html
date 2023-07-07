@@ -1,20 +1,81 @@
-{% extends "layouts/main.html" %}
+{% extends "home-office-kit-layout-new" %}
 
-{% set pageName="Home" %}
+{% block homeOfficeKit_style %}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.flex-container{
+  width: 200%;
+  height: auto;
+  display: flex;
+}
+
+.flex-box{
+  width: 400px;
+  height: 279px;
+  background: white;
+  color: black;
+  text-align: left;
+  line-height: 40px;
+  padding: 24px;
+  border-radius: 10px;
+  margin-right: 24px;
+   
+}
+
+.line-1{
+height: 3px;
+width: 352px;
+background: #732282;
+}
+
+.govuk-heading-xl{
+  color: #732282;
+}
+
+.govuk-body{
+  color: #732282
+}
+{% endblock %}
 
 {% block content %}
+<!-- Add your page content here -->    
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <title>flex-box</title>
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+  <div class="flex-container">
+    
+    <div class="flex-box">
+      <strong><div class="line-1"></div>
+      <h2>Design System</h2></strong>
+      <br>
+    <p>A library of patterns, styles 
+      and components to help you design
+      consistent and accessible digital services.</p>
+      <a href="#" class="govuk-link">View more</a></p>
+    </div>
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
+    <div class="flex-box">
+      <strong><div class="line-1"></div>
+      <h2>Content style guide</h2></strong>
+      <br>
+    <p>Find the right words to use and how
+      best to use them for your service. An A-Z of how to communicate with your users.</p>
+      <a href="#" class="govuk-link">View more</a></p>
+    </div>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+    <div class="flex-box">
+      <strong><div class="line-1"></div>
+      <h2>Manuels & Standards</h2></strong>
+      <br>
+      <p>All things best practice, standards and 
+        guidelines related to help you practice user centred design.</p>
+        <a href="#" class="govuk-link">View more</a></p>
+    </div>
   </div>
-</div>
+
 
 {% endblock %}
