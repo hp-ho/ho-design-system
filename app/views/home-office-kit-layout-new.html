@@ -1,0 +1,146 @@
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/error-message/macro.njk" import govukErrorMessage %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/hint/macro.njk" import govukHint %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/label/macro.njk" import govukLabel %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+{% from "govuk/components/skip-link/macro.njk" import govukSkipLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{%- set assetPath = '/plugin-assets/govuk-frontend/govuk/assets' -%}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block headIcons %}
+  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/plugin-assets/home-office-kit/assets/images/ho-favicon.ico" type="image/x-icon">
+  <link rel="mask-icon" href="/plugin-assets/home-office-kit/assets/images/ho-mask-icon.svg" color="{{ themeColor | default('#0b0c0c') }}"> {# Hardcoded
+  value of $govuk-black #}
+  <link rel="apple-touch-icon" sizes="180x180" href="/plugin-assets/home-office-kit/assets/images/ho-apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/plugin-assets/home-office-kit/assets/images/ho-apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/plugin-assets/home-office-kit/assets/images/ho-apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" href="/plugin-assets/home-office-kit/assets/images/ho-apple-touch-icon.png">
+{% endblock %}
+
+{% block head %}
+  {% block meta %}{% endblock %}
+  {% block stylesheets %}
+    {% include "govuk-prototype-kit/includes/stylesheets.html" %}
+  {% endblock %}
+  <style type="text/css">
+    {% block homeOfficeKit_style %}
+    {% endblock %}
+  </style>
+{% endblock %}
+
+{% block header %}
+  <header class="hods-header" role="banner" data-module="hods-header">
+    <div class="hods-header__container hods-width-container">
+      <div class="hods-header__main">
+        <div class="hods-header__logo">
+          <strong><h2 class="govuk-heading-s">Home Office<br>
+          UCD Manual</h2><strong>
+        </div>
+        <div class="hods-header__title">
+            <nav class="hods-header__navigation">
+						<ul aria-label="Top Level Navigation" class="hods-header__navigation-list">
+							<li class="hods-header__navigation-list__item"><a class="hods-header__navigation-list__link" href="/">Design system</a></li>
+							<li class="hods-header__navigation-list__item"><a class="hods-header__navigation-list__link" href="/">Content style guide</a></li>
+							<li class="hods-header__navigation-list__item"><a class="hods-header__navigation-list__link" href="/">Manuals & standards</a></li>
+              <input aria-expanded="false" aria-owns="app-site-search__input__listbox" aria-autocomplete="both" aria-describedby="app-site-search__input__assistiveHint" autocomplete="off" class="app-site-search__input app-site-search__input--default" id="app-site-search__input" name="input-autocomplete" placeholder="Search Design System" type="text" role="combobox">
+						</ul>
+					</nav>
+        </div>
+      </div>
+        <h1 class="govuk-heading-xl">Design and build services<br>
+        that work for everyone</hl>
+        <br>
+        <br>
+        <p class="govuk-body">Use the UCD Manual to create consistent services that put users first.</p>
+        <br>
+    </div>
+  </header>
+{% endblock %}
+
+{% block beforeContent %} 
+
+  {% block backLink %}
+
+  {% endblock %}
+
+{% endblock %}
+
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+  <footer class="hods-footer" role="contentinfo">
+    <div class="hods-footer__inner">
+      <div class="hods-footer__container hods-width-container">
+        <div class="hods-footer__content">
+          A Home Office Digital, Data and Technology service
+        </div>
+        <div class="hods-footer__navigation">
+          <ul
+            id="navigation"
+            class="hods-footer__navigation-list"
+          >
+            {% if (GOVUKPrototypeKit.isDevelopment) %}
+              <li class="hods-footer__navigation-item">
+                <a class="hods-footer__link" href="/manage-prototype">
+                  Manage your prototype
+                </a>
+              </li>
+            {% endif %}
+            <li class="hods-footer__navigation-item">
+              <a
+                class="hods-footer__link"
+                href="/manage-prototype/clear-data"
+              >
+                Clear data
+              </a>
+            </li>
+            <li class="hods-footer__navigation-item">
+              <a class="hods-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
+                GOV.UK Prototype Kit {{ releaseVersion }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "govuk-prototype-kit/includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}
