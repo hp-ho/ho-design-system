@@ -59,16 +59,57 @@ background: #732282;
 .govuk-heading-xl{
   color: #732282;
   margin-bottom: 0;
+  font-family: roboto;
 }
 
 .govuk-body{
-  color: #732282
+  color: #732282;
+  font-family: roboto;
 }
+
+.hods-header__navigation-list__link{
+  font-family: roboto;
+}
+
+.tile{
+  font-family: roboto;
+}
+
+.govuk-heading-s{
+  font-family: roboto;
+}
+
+.govuk-link{
+  font-family: roboto;
+}
+
+.govuk-heading-m{
+  font-family: roboto;
+}
+
+.latest-news{
+  font-family: roboto;
+}
+
+.contribute{
+  font-family: roboto;
+}
+
+.latest-work{
+  font-family: roboto;
+}
+
 {% endblock %}
 
 {% block content %}
 <!-- Add your page content here -->    
-
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="ho-design.scss" /> 
+    <title>Link CSS to HTML</title>
+</head>
   <title>flex-box</title>
 
   <div class="flex-container">
@@ -77,7 +118,7 @@ background: #732282;
       <strong><div class="line-1"></div>
       <h2>Design System</h2></strong>
       <br>
-    <p>A library of patterns, styles 
+    <p class="tile">A library of patterns, styles 
       and components to help you design
       consistent and accessible digital services.</p>
       <a href="#" class="govuk-link">View more</a></p>
@@ -87,17 +128,17 @@ background: #732282;
       <strong><div class="line-1"></div>
       <h2>Content style guide</h2></strong>
       <br>
-    <p>Find the right words to use and how
-      best to use them for your service. An A-Z of how to communicate with your users.</p>
+    <p class="tile">Find the right words to use and how
+      best to use them for your service. An A-Z of how best to communicate with your users.</p>
       <a href="#" class="govuk-link">View more</a></p>
     </div>
 
     <div class="flex-box">
       <strong><div class="line-1"></div>
-      <h2>Manuels & Standards</h2></strong>
+      <h2>Manuals & Standards</h2></strong>
       <br>
-      <p>All things best practice, standards and 
-        guidelines related to help you practice user centred design.</p>
+      <p class="tile">Find everything from best practice, standards and accessibility guidelines  
+        that will help you to take a user centred approach.</p>
         <a href="#" class="govuk-link">View more</a></p>
     </div>
   </div>
@@ -110,7 +151,7 @@ background: #732282;
 <strong><div class="line-4"></div>
 <br>
   <h3 class="govuk-heading-m">Community</h3>
-  <p>Take a look at what we’re currently working on<br> and our priorities for the future.</p>
+  <p class="latest-work">Take a look at what we’re currently working on<br> and our priorities for the future.</p>
 <p><a href="#" class="govuk-link">Hide this page</a></p>
 <p><a href="#" class="govuk-link">Maps</a></p>
 <p><a href="#" class="govuk-link">Task list</a></p>
@@ -122,7 +163,7 @@ background: #732282;
   <strong><div class="line-2"></div>
 <br>
   <h3 class="govuk-heading-m">Latest news</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean turpis ex, vehicula<br> sed luctus quis, posuere ac libero. Fusce laoreet dolor ac est porta viverra. Class aptent taciti<br> sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+  <p class="latest-news">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean turpis ex, vehicula<br> sed luctus quis, posuere ac libero. Fusce laoreet dolor ac est porta viverra. Class aptent taciti<br> sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
 <p><a href="#" class="govuk-link">Link</a></p>
 
 <br>
@@ -131,7 +172,7 @@ background: #732282;
 <strong><div class="line-3"></div>
 <br>
   <h3 class="govuk-heading-m">Contribute</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean turpis ex, vehicula<br> sed luctus quis, posuere ac libero. Fusce laoreet dolor ac est porta viverra. Class aptent taciti<br> sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+  <p class="contribute">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean turpis ex, vehicula<br> sed luctus quis, posuere ac libero. Fusce laoreet dolor ac est porta viverra. Class aptent taciti<br> sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
 <p><a href="#" class="govuk-link">Link</a></p>
 
 
